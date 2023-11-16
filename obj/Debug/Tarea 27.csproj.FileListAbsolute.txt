@@ -1,0 +1,10 @@
+C:\Users\gisel\Downloads\Programación\Tarea 27\bin\Debug\Tarea 27.exe.config
+C:\Users\gisel\Downloads\Programación\Tarea 27\bin\Debug\Tarea 27.exe
+C:\Users\gisel\Downloads\Programación\Tarea 27\bin\Debug\Tarea 27.pdb
+C:\Users\gisel\Downloads\Programación\Tarea 27\obj\Debug\Tarea 27.csproj.AssemblyReference.cache
+C:\Users\gisel\Downloads\Programación\Tarea 27\obj\Debug\Tarea_27.fmrTarea27.resources
+C:\Users\gisel\Downloads\Programación\Tarea 27\obj\Debug\Tarea_27.Properties.Resources.resources
+C:\Users\gisel\Downloads\Programación\Tarea 27\obj\Debug\Tarea 27.csproj.GenerateResource.cache
+C:\Users\gisel\Downloads\Programación\Tarea 27\obj\Debug\Tarea 27.csproj.CoreCompileInputs.cache
+C:\Users\gisel\Downloads\Programación\Tarea 27\obj\Debug\Tarea 27.exe
+C:\Users\gisel\Downloads\Programación\Tarea 27\obj\Debug\Tarea 27.pdb
