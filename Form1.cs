@@ -12,11 +12,15 @@ namespace Tarea_27
 {
     public partial class fmrTarea27 : Form
     {
+
+        private int a = 0;
+        private int NumAl;
         public fmrTarea27()
         {
             InitializeComponent();
+            Random aleatorio = new Random();
+            NumAl = aleatorio.Next(0, 100);
         }
-
         private void cmdVer_Click(object sender, EventArgs e)
         {
             // Programa que permita a un jugador adivinar un número indeterminado de veces que
@@ -32,60 +36,59 @@ namespace Tarea_27
             // por ser malo.
 
             // Declaración de variables y tipo Random
-            int Num, NumAl, a=0;
-            Random aleatorio = new Random();
-
+            int Num;
+     
             // Asignación de valores a las variables
-            NumAl = aleatorio.Next(100);
-            Num = Convert.ToInt32(txtNum.Text);
 
             // Ciclo do-while para captura de Num
             do
             {
+                Num = Convert.ToInt32(txtNum.Text);
+                a = a + 1;
+               // MessageBox.Show(NumAl.ToString());
                 if (Num < NumAl)
                 {
-                    a = a + 1;
-                    lblMensaje.Text = "El número a adivinar es MAYOR";
-                    txtNum.Focus();
+                    lblMensaje.Text = "0 o 0 El número a adivinar es MAYOR que "+Num;
+                    txtNum.Clear();
                 }
                 else if (Num > NumAl)
                 {
-                    a = a + 1;
-                    lblMensaje.Text = "El número a adivinar es MENOR";
-                    txtNum.Focus();
+                    lblMensaje.Text = "0 - 0 El número a adivinar es Menor que "+Num;
+                    txtNum.Clear();
                 }
-                else
-                {
-                    a = a + 1;
+                else {
+                    if (a <= 5)
+                    {
+                        lblMensaje.Text = "¡Ha adivinado el número! Usted es un buen jugador";
+                        lblIntentos.Text = "Número de intentos: " + a.ToString();
+
+                    }
+                    else if (a > 5 && a <= 15)
+                    {
+                        lblMensaje.Text = "¡Ha adivinido el número! Usted es un jugaror regular";
+                        lblIntentos.Text = "Número de intentos: " + a.ToString();
+
+                    }
+                    else
+                    {
+                        lblMensaje.Text = "¡Ha adivinado el número! Usted es un jugaor malo,\n lo invitamos a seguir prácticando";
+                        lblIntentos.Text = "Número de intentos: " + a.ToString();
+                    }
+                    NumAl = 0;
                 }
-            } while (Num != NumAl);
+            } while(NumAl == Num);
 
-            // Despliqegue del resultado
-            if (a <= 5)
-            {
-                lblMensaje.Text = "¡Ha adivinado el número! Usted es un buen jugador";
-                lblIntentos.Text = "Número de intentos: " + a;
+            
 
-            }
-            else if (a >5 && a <=15)
-            {
-                lblMensaje.Text = "¡Ha adivinido el número! Usted es un jugaror regular";
-                lblIntentos.Text = "Número de intentos: " + a;
-
-            }
-            else
-            {
-                lblMensaje.Text = "¡Ha adivinado el número! Usted es un jugaor malo, lo invitamos a seguir prácticando";
-                lblIntentos.Text = "Número de intentos: " + a;
-            }
-                
         }
 
         private void cmdOtro_Click(object sender, EventArgs e)
         {
-            lblMensaje.Text = "";
+            lblMensaje.Text = "0u0";
             lblIntentos.Text = "";
             txtNum.Clear();
+            Random aleatorio = new Random();
+            NumAl = aleatorio.Next(0, 100);
         }
 
         private void cmdSalir_Click(object sender, EventArgs e)
